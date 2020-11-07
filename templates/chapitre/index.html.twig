@@ -23,8 +23,7 @@
                         </a>
                     </td>
                     <td>{{chapitre.date|date('d/m/Y')}}</td>
-                    <td></td>
-                    {# <td>{{ chapitre.AllCours|length }}</td> #}
+                    <td>{{chapitre.AllCours|length}}</td>
                     <td>
                         <a href="{{ path('delete', {'id': chapitre.id}) }}">
                             Supprimer

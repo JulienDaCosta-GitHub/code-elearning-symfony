@@ -7,7 +7,7 @@
 	<h2>Modifier le chapitre</h2>
 	{{ form(maj) }}
 
-	{<h3>Cours du chapitre</h3>
+	<h3>Cours du chapitre</h3>
 	{% include 'cours/liste.html.twig' with {'AllCours': chapitre.AllCours} %}
 
 {% endblock %}
