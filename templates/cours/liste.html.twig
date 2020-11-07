@@ -1,0 +1,31 @@
+<table border="1">
+    <thead>
+        <tr>
+            <th>Nom</th>
+            <th>Contenu</th>
+            <th>Date</th>
+            <th>Chapitre</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for cours in AllCours %}
+        <tr>
+            <td>
+                <a href="{{ path('show_cours', {'id': cours.id}) }}">
+                {{cours.titre}}
+                </a>
+            </td>
+            <td>{{cours.contenu}}</td>
+            <td>{{cours.date|date('d/m/Y')}}</td>
+            <td>{{cours.chapitre}}</td>
+            <td>
+                <a href="{{path('delete_cours', {'id': cours.id})}}">Supprimer</a>
+            </td>
+        </tr>
+    {% else %} 
+        <tr>
+            <td colspan="4">Il n'y a pas de cours</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>

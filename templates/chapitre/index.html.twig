@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ChapitreController!{% endblock %}
+
+{% block body %}
+
+    <h1>{{ 'Sommaire'|trans }}</h1>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Création</th>
+                <th>Cours</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for chapitre in chapitres %}
+                <tr>
+                    <td>
+                        <a href="{{ path('show', {'id': chapitre.id}) }}">
+                            {{chapitre.titre}}
+                        </a>
+                    </td>
+                    <td>{{chapitre.date|date('d/m/Y')}}</td>
+                    <td></td>
+                    {# <td>{{ chapitre.AllCours|length }}</td> #}
+                    <td>
+                        <a href="{{ path('delete', {'id': chapitre.id}) }}">
+                            Supprimer
+                        </a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="2">Il n'y a pas de chapitres</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <h2>Ajouter un chapitre</h2>
+    {{ form(ajout) }}
+
+{% endblock %}

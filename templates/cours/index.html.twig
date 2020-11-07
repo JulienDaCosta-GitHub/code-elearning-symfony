@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello CoursController!{% endblock %}
+
+{% block body %}
+
+<h1>Cours</h1>
+
+{% include 'cours/liste.html.twig' with {'AllCours': AllCours} %}
+
+<h2>Ajouter un cours</h2>
+{{form(ajout)}}
+
+{% endblock %}

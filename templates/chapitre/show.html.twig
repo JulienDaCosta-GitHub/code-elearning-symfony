@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+	<h1>{{chapitre.titre}}</h1>
+	<p>{{chapitre.date|date('d/m/Y')}}</p>
+
+	<h2>Modifier le chapitre</h2>
+	{{ form(maj) }}
+
+	{<h3>Cours du chapitre</h3>
+	{% include 'cours/liste.html.twig' with {'AllCours': chapitre.AllCours} %}
+
+{% endblock %}
