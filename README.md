@@ -8,4 +8,4 @@ Kevin Zhang, Alexandre Duval et Julien Da Costa
 
 Pour modifier les chapitres, les cours, ou encore supprimer des cours, vous devez vous connecter.
 
-De cette facon, les formulaires apparaitront.
+De cette facon, les formulaires apparaîtront.
