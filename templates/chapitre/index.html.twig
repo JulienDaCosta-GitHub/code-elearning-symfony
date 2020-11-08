@@ -25,11 +25,17 @@
                     </td>
                     <td>{{chapitre.date|date('d/m/Y')}}</td>
                     <td>{{chapitre.AllCours|length}}</td>
+
+                    {% if is_granted('ROLE_USER') %}
+
                     <td>
                         <a href="{{ path('delete', {'id': chapitre.id}) }}">
                             Supprimer
                         </a>
                     </td>
+
+                    {% endif %}
+
                 </tr>
             {% else %}
                 <tr>
@@ -39,9 +45,13 @@
         </tbody>
     </table>
 
-    <div class="ajoutForm ml-3">
+    {% if is_granted('ROLE_USER') %}
+
+    <div class="ajoutForm ml-3 mt-5">
     <h2 class="mb-3 mt-3">Ajouter un chapitre</h2>
     {{form(ajout)}}
     </div>
+
+    {% endif %}
 
 {% endblock %}

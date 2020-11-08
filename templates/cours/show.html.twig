@@ -6,6 +6,11 @@
 <p>{{cours.date|date('d/m/Y')}}</p>
 <p>{{cours.chapitre}}</p>
 
+{% if is_granted('ROLE_USER') %}
+
 <h2>Modifier le cours</h2>
 {{form(maj)}}
+
+{% endif %}
+
 {% endblock %}

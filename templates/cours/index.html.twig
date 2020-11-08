@@ -8,9 +8,13 @@
 
 {% include 'cours/liste.html.twig' with {'AllCours': AllCours} %}
 
+{% if is_granted('ROLE_USER') %}
+
 <div class="ajoutForm ml-3">
 <h2 class="mb-3 mt-3">Ajouter un cours</h2>
 {{form(ajout)}}
 </div>
+
+{% endif %}
 
 {% endblock %}

@@ -19,9 +19,15 @@
             <td>{{cours.contenu}}</td>
             <td>{{cours.date|date('d/m/Y')}}</td>
             <td>{{cours.chapitre}}</td>
+
+            {% if is_granted('ROLE_USER') %}
+
             <td>
                 <a href="{{path('delete_cours', {'id': cours.id})}}">Supprimer</a>
             </td>
+
+            {% endif %}
+
         </tr>
     {% else %} 
         <tr>
