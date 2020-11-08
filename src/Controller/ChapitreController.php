@@ -50,7 +50,7 @@ class ChapitreController extends AbstractController
                 'erreur',
                 'Le chapitre est introuvable'
             );
-            return $this->redirectToRoute('chapitre');
+            return $this->redirectToRoute('home');
         }
 
         $form = $this->createForm(ChapitreType::class, $chapitre);
@@ -81,7 +81,7 @@ class ChapitreController extends AbstractController
                 'erreur',
                 'Chapitre introuvable'
             );
-            return $this->redirectToRoute('chapitre');
+            return $this->redirectToRoute('home');
         }
 
         $em = $this->getDoctrine()->getManager();
@@ -93,7 +93,7 @@ class ChapitreController extends AbstractController
             'Chapitre supprimée'
         );
 
-        return $this->redirectToRoute('chapitre');
+        return $this->redirectToRoute('home');
 
     }
 }
