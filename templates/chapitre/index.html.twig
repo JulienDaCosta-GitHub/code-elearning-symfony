@@ -4,14 +4,15 @@
 
 {% block body %}
 
-    <h1>{{ 'Sommaire'|trans }}</h1>
+    <h1 class="mb-3">{{ 'Sommaire'|trans }}</h1>
 
-    <table border="1">
-        <thead>
+    <table class="table">
+        <thead class="thead-dark">
             <tr>
-                <th>Titre</th>
-                <th>Création</th>
-                <th>Cours</th>
+                <th scope="col">Titre</th>
+                <th scope="col">Création</th>
+                <th scope="col">Cours</th>
+                <th scope="col"></th>
             </tr>
         </thead>
         <tbody>
@@ -38,7 +39,7 @@
         </tbody>
     </table>
 
-    <h2>Ajouter un chapitre</h2>
+    <h2 class="mb-3">Ajouter un chapitre</h2>
     {{ form(ajout) }}
 
 {% endblock %}
