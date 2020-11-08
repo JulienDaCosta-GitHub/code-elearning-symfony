@@ -13,7 +13,7 @@ use Symfony\Contracts\Translation\TranslatorInterface;
 class ChapitreController extends AbstractController
 {
     /**
-     * @Route("/chapitre", name="chapitre")
+     * @Route("/", name="home")
      */
     public function index(Request $request, TranslatorInterface $trans): Response
     {

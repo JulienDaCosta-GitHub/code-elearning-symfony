@@ -4,13 +4,13 @@
 
 {% block body %}
 
-<h1 class="mb-3">Cours</h1>
+<h1 class="mb-3 mt-3 ml-3">Cours</h1>
 
 {% include 'cours/liste.html.twig' with {'AllCours': AllCours} %}
 
-<div class="ml-3">
-<h2 class="text-justify mb-3">Ajouter un cours</h2>
-
+<div class="ajoutForm ml-3">
+<h2 class="mb-3 mt-3">Ajouter un cours</h2>
 {{form(ajout)}}
 </div>
+
 {% endblock %}
