@@ -1,9 +1,9 @@
-# code-elearning-symfony
+# Projet : code-elearning-symfony
 
-# Groupe
+# Groupe A3DW1 :
 
 Kevin Zhang, Alexandre Duval et Julien Da Costa
 
-# IMPORTANT
+# IMPORTANT :
 
-Pour modifier les chapitres, les cours, ou encore supprimer des cours, vous devez vous connecter.
+Pour modifier les chapitres, les cours, ou encore supprimer des cours, vous devez vous connecter. Ainsi les formulaires apparaitront.
